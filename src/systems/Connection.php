@@ -110,6 +110,10 @@ class Connection implements Database
         $this->stmt = $stmt;
     }
 
+    public function lastInsertId() {
+        return $this->pdo->lastInsertId();
+    }
+
     /**
      * Fetching single data
      *

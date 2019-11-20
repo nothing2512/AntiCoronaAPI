@@ -69,6 +69,10 @@ class User implements Constants
         if (isset($_FILES["photo"])) {
             $photo = $this->image->upload($_FILES["photo"], self::PHOTO_PATH, $this->request);
             if ($photo->code != self::SUCCESS) return $this->response->publish(null, $photo->message, $photo->code);
+        } else {
+            $_photo = $this->request->get("photo");
+            $_photo = explode("/", $_photo);
+            $this->request->set(self::PHOTO_PATH, end($_photo));
         }
 
         $userId = $this->request->getAuth()->userId;
@@ -76,7 +80,7 @@ class User implements Constants
         $this->userModel->update([
             ":name"     => $this->request->get("name"),
             ":password" => $this->encryption->password($this->request->get("password")),
-            ":photo"    => $this->request->get("photo"),
+            ":photo"    => $this->request->get(self::PHOTO_PATH),
             ":userId"   => $userId
         ]);
 

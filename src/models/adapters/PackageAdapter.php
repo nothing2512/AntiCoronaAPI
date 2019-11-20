@@ -24,7 +24,10 @@ class PackageAdapter implements Constants
         "stock"         => 0,
         "discount"      => 0,
         "image"         => "",
-        "view"          => 0
+        "view"          => 0,
+        "booked"        => 0,
+        "rating"        => 0,
+        "ownRate"       => 0,
     ];
 
     public function __construct()
@@ -46,7 +49,8 @@ class PackageAdapter implements Constants
             "after"     => $this->_countDiscount($package),
             "discount"  => $package->discount
         ];
-        unset($package->price);
+        $package->rating = (float) $package->rate;
+        unset($package->rate);
         unset($package->discount);
 
         return $package;

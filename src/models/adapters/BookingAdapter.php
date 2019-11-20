@@ -27,7 +27,9 @@ class BookingAdapter implements Constants
         "originalPrice" => 0,
         "discount"      => 0,
         "price"         => 0,
-        "payment"       => ""
+        "payment"       => "",
+        "paymentDescription" => "",
+        "status"       => 0
     ];
 
     public function __construct()
@@ -43,7 +45,7 @@ class BookingAdapter implements Constants
 
         $booking->price = [
             "normal"    => $booking->originalPrice,
-            "after"     => $booking->price,
+            "after"     => (float) $booking->price,
             "discount"  => $booking->discount
         ];
 
@@ -52,8 +54,16 @@ class BookingAdapter implements Constants
             "booking"   => $booking->bookDate
         ];
 
+        $booking->payment = [
+            "method"        => $booking->payment,
+            "description"   => $booking->paymentDescription
+        ];
+
+        unset($booking->packageId);
+        unset($booking->userId);
+        unset($booking->payment);
+        unset($booking->paymentDescription);
         unset($booking->originalPrice);
-        unset($booking->price);
         unset($booking->discount);
         unset($booking->departureDate);
         unset($booking->bookDate);
