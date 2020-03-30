@@ -1,6 +1,6 @@
 <?php
 
-namespace Tour\systems;
+namespace Corona\systems;
 
 /**
  * Class Request
@@ -62,6 +62,7 @@ class Request
      * Remove params value
      *
      * @param $key
+     * @noinspection PhpUnused
      */
     public function remove ( $key ) {
 
@@ -85,6 +86,11 @@ class Request
         ];
 
         $_auth = explode(":", $_auth[0]);
+
+        if (sizeof($_auth) == 1 ) return (object) [
+            "userId"    => 0,
+            "apiKey"     => "Invalid"
+        ];
 
         return ( object ) [
             "userId"    => $_auth[0],

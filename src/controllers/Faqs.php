@@ -23,7 +23,7 @@ class Faqs implements Constants {
 
         $this->request->parse($request);
 
-        $filename = $this->request->get("lang") == "eng" ? "Faqs_eng.json" : "Faqs.json";
+        $filename = $this->request->get("lang") == "eng" ? "faqs_eng.json" : "faqs.json";
 
         $path = str_replace("controllers", self::JSON_PATH . $filename, __DIR__);
         $data = file_get_contents($path);

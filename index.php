@@ -3,7 +3,7 @@
 require_once ('../vendor/autoload.php');
 require_once ('./vendor/autoload.php');
 
-use Tour\Tour;
+use Corona\Corona;
 
-$app = new Tour();
+$app = new Corona();
 $app->run();

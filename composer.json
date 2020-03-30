@@ -1,6 +1,6 @@
 {
-    "name": "our/tour",
-    "description": "Our Tour Service v1",
+    "name": "nothing/corona",
+    "description": "Corona Service v1",
     "type": "project",
     "minimum-stability": "dev",
     "require": {
@@ -10,7 +10,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Tour\\": "src/"
+            "Corona\\": "src/"
         }
     }
 }

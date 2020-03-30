@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Tour\\' => array($baseDir . '/src'),
+    'Corona\\' => array($baseDir . '/src'),
 );
