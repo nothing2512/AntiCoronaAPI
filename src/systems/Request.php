@@ -68,33 +68,4 @@ class Request
 
         unset ( $this->params->$key );
     }
-
-    /**
-     * Get Authorization
-     *
-     * @return object
-     */
-    public function getAuth () {
-
-        // Get authorization
-        $_auth = $this->request->getHeader( 'HTTP_AUTHORIZATION' );
-
-        // Check and return auth
-        if (sizeof($_auth) == 0 ) return (object) [
-            "userId"    => 0,
-            "apiKey"     => ""
-        ];
-
-        $_auth = explode(":", $_auth[0]);
-
-        if (sizeof($_auth) == 1 ) return (object) [
-            "userId"    => 0,
-            "apiKey"     => "Invalid"
-        ];
-
-        return ( object ) [
-            "userId"    => $_auth[0],
-            "apiKey"    => $_auth[1]
-        ];
-    }
 }

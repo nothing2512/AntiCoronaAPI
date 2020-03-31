@@ -79,19 +79,42 @@ Link: [https://nothing-ar.000webhostapp.com/anticorona/v1/faqs?lang=eng](https:/
 Parameter: lang (String)
 ```$xslt
 [
+  ...
   {
     "question": "There are family members who show mild symptoms of the corona virus, how do I treat it at home?",
     "answer": "If a family member has a fever, fatigue or dry cough, seek help at a health facility...."
   }
+  ...
+]
+```
+
+<br>
+Get Recent News
+
+Link: [https://nothing-ar.000webhostapp.com/anticorona/v1/news?lang=eng](https://nothing-ar.000webhostapp.com/anticorona/v1/faqs?lang=eng)
+<br> 
+Parameter: lang (String)
+```$xslt
+[
+  ...
+  {
+    "author": "Nothing",
+    "title": "title",
+    "desc": "desc",
+    "image": "url",
+    "content": "contents"
+  },
+  ...
 ]
 ```
 <br></br>
 <br></br>
 ### Source Data
 
-[Kawal Corona](https://kawalcorona.com)<br>
-[Corona Ninja](https://github.com/novelcovid/api)<br>
-[COVID 19](https://www.covid19.go.id)
+<li><a href="https://kawalcorona.com">Kawal Corona</a></li>
+<li><a href="https://github.com/novelcovid/api">Novel Covid</a></li>
+<li><a href="https://www.covid19.go.id">COIVD 19</a></li>
+<li><a href="https://https://newsapi.org/">News API</a></li>
 
 
 
