@@ -14,7 +14,7 @@ class CaseModel implements Constants {
 
         return [
             "location" => $data->name,
-            "cases" => $data->positif,
+            "cases" => str_replace(",", "", $data->positif),
             "recovered" => $data->sembuh,
             "death" => $data->meninggal,
             "flag"  => self::INDONESIAN_FLAG

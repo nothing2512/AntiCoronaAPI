@@ -41,9 +41,8 @@ class News
             array_push($result, [
                 "author" => $article->author,
                 "title" => $article->title,
-                "desc" => $article->description,
                 "image" => $article->urlToImage,
-                "content" => $article->content
+                "url"   => $article->url
             ]);
         }
 

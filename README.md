@@ -17,7 +17,7 @@ Link: [https://nothing-ar.000webhostapp.com/anticorona/v1/cases/indonesia](https
 ```$xslt
 {
   "location": "Indonesia",
-  "cases": "1,414",
+  "cases": "1414",
   "recovered": "75",
   "death": "122",
   "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/id.png"
@@ -50,7 +50,7 @@ Link: [https://nothing-ar.000webhostapp.com/anticorona/v1/cases/list](https://no
   ...
   {
     "location": "Indonesia",
-    "cases": "1,414",
+    "cases": "1414",
     "recovered": "75",
     "death": "122",
     "flag": "https://raw.githubusercontent.com/NovelCOVID/API/master/assets/flags/id.png"
@@ -100,9 +100,8 @@ Parameter: lang (String)
   {
     "author": "Nothing",
     "title": "title",
-    "desc": "desc",
-    "image": "url",
-    "content": "contents"
+    "image": "image url",
+    "url": "web url"
   },
   ...
 ]
